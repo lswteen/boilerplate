@@ -11,5 +11,6 @@ h2database = "1.4.200"
 springBootStarterWeb = { group = "org.springframework.boot", name = "spring-boot-starter-web", version.ref = "springBoot" }
 springBootStarterDataJpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa", version.ref = "springBoot" }
 springBootStarterTest = { group = "org.springframework.boot", name = "spring-boot-starter-test", version.ref = "springBoot" }
+
 lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
 h2 = { group = "com.h2database", name="h2", version.ref="h2database"}
