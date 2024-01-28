@@ -12,6 +12,7 @@ dependencies {
     }
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0") // <4>
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
 }
 
 tasks.named<Test>("test") {

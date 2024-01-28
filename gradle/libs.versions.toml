@@ -4,14 +4,12 @@
 
 [versions]
 springBoot = "3.2.2"
-springDependencyManagement = "1.1.4"
 lombok = "1.18.22"
-springBootStarterWeb = "3.2.2"
-springBootStarterDataJpa = "3.2.2"
-springBootStarterTest = "3.2.2"
 h2database = "1.4.200"
 
 [libraries]
 springBootStarterWeb = { group = "org.springframework.boot", name = "spring-boot-starter-web", version.ref = "springBoot" }
+springBootStarterDataJpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa", version.ref = "springBoot" }
+springBootStarterTest = { group = "org.springframework.boot", name = "spring-boot-starter-test", version.ref = "springBoot" }
 lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
-springBootStarterTest = { group = "org.springframework.boot", name = "spring-boot-starter-test", version.ref = "springBootStarterTest" }
+h2 = { group = "com.h2database", name="h2", version.ref="h2database"}

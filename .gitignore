@@ -28,6 +28,8 @@ replay_pid*
 .idea/
 .gradle
 *.lock
+.gradle
+
 buildSrc/
 *.bat
 *.tar
