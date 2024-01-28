@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.renzo.zelda.ZeldaApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-28T01:17:56" hostname="lswteenui-iMac.local" time="0.432">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.renzo.zelda.ZeldaApplicationTests" time="0.432"/>
+  <system-out><![CDATA[10:17:55.643 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.renzo.zelda.ZeldaApplicationTests]: ZeldaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:17:55.686 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.renzo.zelda.ZeldaApplication for test class com.renzo.zelda.ZeldaApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+2024-01-28T10:17:55.862+09:00  INFO 5352 --- [    Test worker] com.renzo.zelda.ZeldaApplicationTests    : Starting ZeldaApplicationTests using Java 17.0.7 with PID 5352 (started by lswteen in /Users/lswteen/workspace/boilerplate)
+2024-01-28T10:17:55.862+09:00  INFO 5352 --- [    Test worker] com.renzo.zelda.ZeldaApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-01-28T10:17:56.392+09:00  INFO 5352 --- [    Test worker] com.renzo.zelda.ZeldaApplicationTests    : Started ZeldaApplicationTests in 0.641 seconds (process running for 1.094)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
