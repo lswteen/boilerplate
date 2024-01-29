@@ -8,25 +8,10 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-01-28T16:24:52+0900",
-    comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.5.jar, environment: Java 17.0.7 (Amazon.com Inc.)"
+    date = "2024-01-29T21:07:18+0900",
+    comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.5.jar, environment: Java 17.0.7 (Amazon.com Inc.)"
 )
 public class UserMapperImpl implements UserMapper {
-
-    @Override
-    public User userEntityToUser(UserEntity entity) {
-        if ( entity == null ) {
-            return null;
-        }
-
-        Long userId = null;
-        String keyword = null;
-        String gender = null;
-
-        User user = new User( userId, keyword, gender );
-
-        return user;
-    }
 
     @Override
     public UserEntity userToUserEntity(User user) {

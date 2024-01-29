@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.renzo.zelda.search.mapper.UserMapperTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-01-28T07:29:05" hostname="lswteenui-iMac.local" time="0.02">
+<testsuite name="com.renzo.zelda.search.mapper.UserMapperTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-29T12:07:18" hostname="lswteenui-iMac.local" time="0.01">
   <properties/>
-  <testcase name="usrEntityToUserMapping()" classname="com.renzo.zelda.search.mapper.UserMapperTest" time="0.02">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;null&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:652)
-	at app//com.renzo.zelda.search.mapper.UserMapperTest.usrEntityToUserMapping(UserMapperTest.java:16)
-	at java.base@17.0.7/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base@17.0.7/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base@17.0.7/java.util.ArrayList.forEach(ArrayList.java:1511)
-</failure>
-  </testcase>
+  <testcase name="usrEntityToUserMapping()" classname="com.renzo.zelda.search.mapper.UserMapperTest" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
