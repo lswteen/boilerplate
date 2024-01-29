@@ -38,7 +38,7 @@ public class SearchService {
                 .updatedAt(LocalDateTime.now())
                 .searchEntity(searchEntity)
                 .build());
-        return searchMapper.searchCoditionEntityToSearchCondition(searchConditionEntity);
+        return searchMapper.searchConditionEntityToSearchCondition(searchConditionEntity);
     }
 
 }

@@ -4,7 +4,7 @@ import lombok.Builder;
 
 import java.time.LocalDateTime;
 
-@Builder
+@Builder()
 public record Search (Long id, String userId,
                       String title, Integer order,
                       LocalDateTime createdAt, LocalDateTime updatedAt){

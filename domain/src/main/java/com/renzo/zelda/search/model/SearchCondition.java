@@ -5,7 +5,7 @@ import lombok.Builder;
 import java.time.LocalDateTime;
 
 
-@Builder
+@Builder()
 public record SearchCondition(Long id, Long mappingSearchId,
                               String type, String value,
                               LocalDateTime createdAt, LocalDateTime updatedAt) {

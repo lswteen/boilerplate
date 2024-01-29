@@ -8,8 +8,8 @@ import java.time.LocalDateTime;
 @Table(name="searchCondition")
 @Entity(name="searchCondition")
 @Builder()
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
+
 public class SearchConditionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +23,17 @@ public class SearchConditionEntity {
     @ManyToOne
     @JoinColumn(name="mappingSearchId", insertable = false, updatable = false)
     private SearchEntity searchEntity;
+
+    public SearchConditionEntity(Long id, Long mappingSearchId,
+                                 String type, String value,
+                                 LocalDateTime createdAt, LocalDateTime updatedAt,
+                                 SearchEntity searchEntity) {
+        this.id = id;
+        this.mappingSearchId = mappingSearchId;
+        this.type = type;
+        this.value = value;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.searchEntity = searchEntity;
+    }
 }

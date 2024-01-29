@@ -11,7 +11,7 @@ import java.util.List;
 @Table(name="search")
 @Entity(name="search")
 @Builder()
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 public class SearchEntity {
 
@@ -24,6 +24,7 @@ public class SearchEntity {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
+    @Builder.Default
     @OneToMany(mappedBy = "searchEntity")
     private List<SearchConditionEntity> searchConditionList = Collections.emptyList();
 }
