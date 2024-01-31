@@ -22,7 +22,7 @@ public class SearchService {
     Search getSearchWithConditions(Long mappingSearchId){
         SearchEntity searchEntity = searchRepository.findById(mappingSearchId)
                 .orElseThrow(()-> new EntityNotFoundException("mapping search not found"));
-        return searchMapper.searchEntityToSearch(searchEntity);
+        return searchMapper.toModel(searchEntity);
     }
 
     SearchCondition createSearchCondition(Long mappingSearchId,
@@ -38,7 +38,7 @@ public class SearchService {
                 .updatedAt(LocalDateTime.now())
                 .searchEntity(searchEntity)
                 .build());
-        return searchMapper.searchConditionEntityToSearchCondition(searchConditionEntity);
+        return searchMapper.toModel(searchConditionEntity);
     }
 
 }

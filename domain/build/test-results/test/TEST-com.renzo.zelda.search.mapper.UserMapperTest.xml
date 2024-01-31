@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.renzo.zelda.search.mapper.UserMapperTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-29T13:29:12" hostname="lswteenui-iMac.local" time="0.008">
-  <properties/>
-  <testcase name="usrEntityToUserMapping()" classname="com.renzo.zelda.search.mapper.UserMapperTest" time="0.008"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
