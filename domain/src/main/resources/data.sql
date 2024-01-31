@@ -11,7 +11,7 @@ CREATE TABLE searchCondition (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     mapping_search_id BIGINT,
     type VARCHAR(255),
-    value VARCHAR(255),
+    type_value VARCHAR(255),
     created_at TIMESTAMP,
     updated_at TIMESTAMP,
     FOREIGN KEY (mapping_search_id) REFERENCES search(id)
