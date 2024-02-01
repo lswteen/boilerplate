@@ -9,10 +9,10 @@ import java.util.List;
 @Getter
 @Table(name="search")
 @Entity(name="search")
-@Builder()
+@Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class SearchEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,13 +29,4 @@ public class SearchEntity {
     @OneToMany(mappedBy = "searchEntity",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<SearchConditionEntity> searchConditionList;
 
-    public SearchEntity(Long id, String userId, String title, Integer order, LocalDateTime createdAt, LocalDateTime updatedAt, List<SearchConditionEntity> searchConditionList) {
-        this.id = id;
-        this.userId = userId;
-        this.title = title;
-        this.order = order;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-        this.searchConditionList = searchConditionList;
-    }
 }

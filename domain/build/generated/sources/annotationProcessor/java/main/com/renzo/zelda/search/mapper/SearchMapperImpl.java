@@ -5,15 +5,16 @@ import com.renzo.zelda.search.entity.SearchEntity;
 import com.renzo.zelda.search.model.Search;
 import com.renzo.zelda.search.model.SearchCondition;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-01-31T21:48:43+0900",
+    date = "2024-02-01T22:46:31+0900",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.5.jar, environment: Java 17.0.7 (Amazon.com Inc.)"
 )
+@Component
 public class SearchMapperImpl implements SearchMapper {
 
     @Override
@@ -41,23 +42,7 @@ public class SearchMapperImpl implements SearchMapper {
             return null;
         }
 
-        Long id = null;
-        String userId = null;
-        String title = null;
-        Integer order = null;
-        LocalDateTime createdAt = null;
-        LocalDateTime updatedAt = null;
-        List<SearchConditionEntity> searchConditionList = null;
-
-        id = search.id();
-        userId = search.userId();
-        title = search.title();
-        order = search.order();
-        createdAt = search.createdAt();
-        updatedAt = search.updatedAt();
-        searchConditionList = searchConditionListToSearchConditionEntityList( search.searchConditionList() );
-
-        SearchEntity searchEntity = new SearchEntity( id, userId, title, order, createdAt, updatedAt, searchConditionList );
+        SearchEntity searchEntity = new SearchEntity();
 
         return searchEntity;
     }
@@ -106,18 +91,5 @@ public class SearchMapperImpl implements SearchMapper {
         SearchConditionEntity searchConditionEntity = new SearchConditionEntity( id, mappingSearchId, type, value, createdAt, updatedAt, searchEntity );
 
         return searchConditionEntity;
-    }
-
-    protected List<SearchConditionEntity> searchConditionListToSearchConditionEntityList(List<SearchCondition> list) {
-        if ( list == null ) {
-            return null;
-        }
-
-        List<SearchConditionEntity> list1 = new ArrayList<SearchConditionEntity>( list.size() );
-        for ( SearchCondition searchCondition : list ) {
-            list1.add( toEntity( searchCondition ) );
-        }
-
-        return list1;
     }
 }
