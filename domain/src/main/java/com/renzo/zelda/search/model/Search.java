@@ -5,10 +5,13 @@ import lombok.Builder;
 import java.time.LocalDateTime;
 import java.util.List;
 @Builder(toBuilder = true)
-public record Search (Long id, String userId,
-                      String title, Integer order,
-                      LocalDateTime createdAt, LocalDateTime updatedAt,
-                      List<SearchCondition> searchConditionList
-){
-
+public record Search (
+        Long id,
+        String userId,
+        String title,
+        Integer order,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt,
+        List<SearchCondition> searchConditionList
+) {
 }

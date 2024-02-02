@@ -9,7 +9,7 @@ CREATE TABLE search (
 
 CREATE TABLE searchCondition (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    mapping_search_id BIGINT,
+    mapping_search_id BIGINT NOT NULL,
     type VARCHAR(255),
     type_value VARCHAR(255),
     created_at TIMESTAMP,

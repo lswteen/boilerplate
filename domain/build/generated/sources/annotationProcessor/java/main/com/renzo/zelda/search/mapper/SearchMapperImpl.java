@@ -4,17 +4,15 @@ import com.renzo.zelda.search.entity.SearchConditionEntity;
 import com.renzo.zelda.search.entity.SearchEntity;
 import com.renzo.zelda.search.model.Search;
 import com.renzo.zelda.search.model.SearchCondition;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
-import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-02-01T22:46:31+0900",
+    date = "2024-02-02T22:51:38+0900",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.5.jar, environment: Java 17.0.7 (Amazon.com Inc.)"
 )
-@Component
 public class SearchMapperImpl implements SearchMapper {
 
     @Override
@@ -23,17 +21,17 @@ public class SearchMapperImpl implements SearchMapper {
             return null;
         }
 
-        Long id = null;
-        String userId = null;
-        String title = null;
-        Integer order = null;
-        LocalDateTime createdAt = null;
-        LocalDateTime updatedAt = null;
-        List<SearchCondition> searchConditionList = null;
+        Search.SearchBuilder search = Search.builder();
 
-        Search search = new Search( id, userId, title, order, createdAt, updatedAt, searchConditionList );
+        search.id( searchEntity.getId() );
+        search.userId( searchEntity.getUserId() );
+        search.title( searchEntity.getTitle() );
+        search.order( searchEntity.getOrder() );
+        search.createdAt( searchEntity.getCreatedAt() );
+        search.updatedAt( searchEntity.getUpdatedAt() );
+        search.searchConditionList( searchConditionEntityListToSearchConditionList( searchEntity.getSearchConditionList() ) );
 
-        return search;
+        return search.build();
     }
 
     @Override
@@ -42,9 +40,17 @@ public class SearchMapperImpl implements SearchMapper {
             return null;
         }
 
-        SearchEntity searchEntity = new SearchEntity();
+        SearchEntity.SearchEntityBuilder searchEntity = SearchEntity.builder();
 
-        return searchEntity;
+        searchEntity.id( search.id() );
+        searchEntity.userId( search.userId() );
+        searchEntity.title( search.title() );
+        searchEntity.order( search.order() );
+        searchEntity.createdAt( search.createdAt() );
+        searchEntity.updatedAt( search.updatedAt() );
+        searchEntity.searchConditionList( searchConditionListToSearchConditionEntityList( search.searchConditionList() ) );
+
+        return searchEntity.build();
     }
 
     @Override
@@ -53,17 +59,16 @@ public class SearchMapperImpl implements SearchMapper {
             return null;
         }
 
-        Long id = null;
-        Long mappingSearchId = null;
-        String type = null;
-        String value = null;
-        LocalDateTime createdAt = null;
-        LocalDateTime updatedAt = null;
-        Search search = null;
+        SearchCondition.SearchConditionBuilder searchCondition = SearchCondition.builder();
 
-        SearchCondition searchCondition = new SearchCondition( id, mappingSearchId, type, value, createdAt, updatedAt, search );
+        searchCondition.id( searchConditionEntity.getId() );
+        searchCondition.mappingSearchId( searchConditionEntity.getMappingSearchId() );
+        searchCondition.type( searchConditionEntity.getType() );
+        searchCondition.value( searchConditionEntity.getValue() );
+        searchCondition.createdAt( searchConditionEntity.getCreatedAt() );
+        searchCondition.updatedAt( searchConditionEntity.getUpdatedAt() );
 
-        return searchCondition;
+        return searchCondition.build();
     }
 
     @Override
@@ -72,24 +77,41 @@ public class SearchMapperImpl implements SearchMapper {
             return null;
         }
 
-        Long id = null;
-        Long mappingSearchId = null;
-        String type = null;
-        String value = null;
-        LocalDateTime createdAt = null;
-        LocalDateTime updatedAt = null;
+        SearchConditionEntity.SearchConditionEntityBuilder searchConditionEntity = SearchConditionEntity.builder();
 
-        id = searchCondition.id();
-        mappingSearchId = searchCondition.mappingSearchId();
-        type = searchCondition.type();
-        value = searchCondition.value();
-        createdAt = searchCondition.createdAt();
-        updatedAt = searchCondition.updatedAt();
+        searchConditionEntity.id( searchCondition.id() );
+        searchConditionEntity.mappingSearchId( searchCondition.mappingSearchId() );
+        searchConditionEntity.type( searchCondition.type() );
+        searchConditionEntity.value( searchCondition.value() );
+        searchConditionEntity.createdAt( searchCondition.createdAt() );
+        searchConditionEntity.updatedAt( searchCondition.updatedAt() );
 
-        SearchEntity searchEntity = null;
+        return searchConditionEntity.build();
+    }
 
-        SearchConditionEntity searchConditionEntity = new SearchConditionEntity( id, mappingSearchId, type, value, createdAt, updatedAt, searchEntity );
+    protected List<SearchCondition> searchConditionEntityListToSearchConditionList(List<SearchConditionEntity> list) {
+        if ( list == null ) {
+            return null;
+        }
 
-        return searchConditionEntity;
+        List<SearchCondition> list1 = new ArrayList<SearchCondition>( list.size() );
+        for ( SearchConditionEntity searchConditionEntity : list ) {
+            list1.add( toModel( searchConditionEntity ) );
+        }
+
+        return list1;
+    }
+
+    protected List<SearchConditionEntity> searchConditionListToSearchConditionEntityList(List<SearchCondition> list) {
+        if ( list == null ) {
+            return null;
+        }
+
+        List<SearchConditionEntity> list1 = new ArrayList<SearchConditionEntity>( list.size() );
+        for ( SearchCondition searchCondition : list ) {
+            list1.add( toEntity( searchCondition ) );
+        }
+
+        return list1;
     }
 }

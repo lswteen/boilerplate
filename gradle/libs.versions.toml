@@ -4,7 +4,7 @@
 
 [versions]
 springBoot = "3.2.2"
-lombok = "1.18.22"
+lombok = "1.18.30"
 h2database = "2.2.220"
 
 [libraries]

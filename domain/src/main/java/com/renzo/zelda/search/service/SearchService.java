@@ -19,6 +19,7 @@ public class SearchService {
     private final SearchRepository searchRepository;
     private final SearchConditionRepository searchConditionRepository;
     private final SearchMapper searchMapper = SearchMapper.INSTANCE;
+
     Search getSearchWithConditions(Long mappingSearchId){
         SearchEntity searchEntity = searchRepository.findById(mappingSearchId)
                 .orElseThrow(()-> new EntityNotFoundException("mapping search not found"));
