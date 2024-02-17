@@ -30,7 +30,6 @@ replay_pid*
 *.lock
 .gradle
 
-buildSrc/
 *.bat
 *.tar
 *.bin

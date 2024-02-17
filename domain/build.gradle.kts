@@ -6,6 +6,7 @@ dependencies {
     implementation (libs.springBootStarterDataJpa)
     implementation ("org.hibernate:hibernate-validator:8.0.0.Final")
 
+//  mapstruct
     val mapstructVersion = "1.5.5.Final" // MapStruct 버전을 직접 지정
     implementation("org.mapstruct:mapstruct:$mapstructVersion")
     annotationProcessor("org.mapstruct:mapstruct-processor:$mapstructVersion")
